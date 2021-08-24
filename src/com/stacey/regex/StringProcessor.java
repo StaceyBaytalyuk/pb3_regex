@@ -43,11 +43,7 @@ public class StringProcessor {
 
     public void filterNumbers(String input) {
         Pattern patternNumber = Pattern.compile("\\d+");
-        Pattern patternNotNumber = Pattern.compile("[\\D\\-]+");
-        Matcher matcher = patternNotNumber.matcher(input);
-        matcher.replaceAll(" ");
-
-        matcher = patternNumber.matcher(input);
+        Matcher matcher = patternNumber.matcher(input);
         List<Integer> integers = new ArrayList<>();
         while (matcher.find()) {
             integers.add(Integer.parseInt(matcher.group()));
@@ -59,6 +55,7 @@ public class StringProcessor {
         String copy = new StringBuilder(input).reverse().toString();
         copy = copy.replaceAll("(.)(?=.*\\1)", "");
         copy = new StringBuilder(copy).reverse().toString();
-        System.out.println(copy);
+        String res = copy.replaceAll(" ", "");
+        System.out.println(res);
     }
 }
