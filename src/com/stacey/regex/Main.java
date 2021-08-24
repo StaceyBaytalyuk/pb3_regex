@@ -19,7 +19,7 @@ public class Main {
         System.out.println("3) Count words");
         processor.countWords(in.nextLine());
         System.out.println("4) Show numbers");
-        processor.filterNumbers(in.nextLine());
+        processor.filterNumbers2(in.nextLine());
         System.out.println("5) Delete duplicates");
         processor.deleteDuplicatesAndSpaces(in.nextLine());
     }
